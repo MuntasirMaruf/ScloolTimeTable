@@ -1,0 +1,14 @@
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\bin\Debug\SchoolTimeTableBLL.dll
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\bin\Debug\SchoolTimeTableBLL.pdb
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\bin\Debug\SchoolTimeTableDAL.dll
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\bin\Debug\SchoolTimeTableDAL.pdb
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\obj\Debug\SchoolTimeTableBLL.csproj.AssemblyReference.cache
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\obj\Debug\SchoolTimeTableBLL.csproj.CoreCompileInputs.cache
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\obj\Debug\SchoolTi.30F4C2B5.Up2Date
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\obj\Debug\SchoolTimeTableBLL.dll
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\obj\Debug\SchoolTimeTableBLL.pdb
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\bin\Debug\AutoMapper.dll
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\bin\Debug\EntityFramework.dll
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\bin\Debug\SchoolTimeTableDAL.dll.config
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\bin\Debug\AutoMapper.xml
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableBLL\bin\Debug\EntityFramework.xml

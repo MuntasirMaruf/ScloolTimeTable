@@ -1,0 +1,17 @@
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\bin\Debug\SchoolTimeTableDAL.dll
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\bin\Debug\SchoolTimeTableDAL.pdb
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.csproj.AssemblyReference.cache
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.csproj.CoreCompileInputs.cache
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.dll
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.pdb
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\bin\Debug\SchoolTimeTableDAL.dll.config
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\bin\Debug\EntityFramework.dll
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\bin\Debug\EntityFramework.xml
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTi.F9AAABF8.Up2Date
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.InitialTableCreation.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.csproj.GenerateResource.cache
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.Addedpassword.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.AddedTeacherAuthentication.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.UpdatedLoginTableAttributes.resources
