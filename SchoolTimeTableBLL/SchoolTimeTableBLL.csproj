@@ -50,6 +50,7 @@
     <Compile Include="DTOs\RoomDTO.cs" />
     <Compile Include="DTOs\RoomSlotDTO.cs" />
     <Compile Include="DTOs\ScheduleDTO.cs" />
+    <Compile Include="DTOs\SchoolDocumentDTO.cs" />
     <Compile Include="DTOs\SectionDTO.cs" />
     <Compile Include="DTOs\SlotDTO.cs" />
     <Compile Include="DTOs\StatusDTO.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\SubjectService.cs" />
     <Compile Include="Services\TeacherService.cs" />
+    <Compile Include="Services\UploadService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SchoolTimeTableDAL\SchoolTimeTableDAL.csproj">

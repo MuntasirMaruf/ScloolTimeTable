@@ -81,5 +81,9 @@ namespace SchoolTimeTableDAL
         {
             return new RoomSlotRepo();
         }
+        public static IRepo<SchoolDocument, int, SchoolDocument> SchoolDocumentData()
+        {
+            return new SchoolDocumentRepo();
+        }
     }
 }

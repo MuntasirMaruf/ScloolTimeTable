@@ -23,6 +23,7 @@ namespace SchoolTimeTableDAL.EF
         public DbSet<Status> Statuses { get; set; }
         public DbSet<Token> Tokens { get; set; }
         public DbSet<TokenStudent> TokenStudents { get; set; }
+        public DbSet<SchoolDocument> SchoolDocuments { get; set; }
 
     }
 }
