@@ -119,12 +119,20 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Auths\StudentLogged.cs" />
     <Compile Include="Auths\TeacherLogged.cs" />
+    <Compile Include="Controllers\RoomController.cs" />
+    <Compile Include="Controllers\RoomSlotController.cs" />
+    <Compile Include="Controllers\SlotController.cs" />
+    <Compile Include="Controllers\StudentAdmissionController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\SubjectController.cs" />
+    <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\StudentAdmission.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

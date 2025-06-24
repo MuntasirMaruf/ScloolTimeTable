@@ -16,12 +16,12 @@ namespace SchoolTimeTableApi.Auths
             var header = actionContext.Request.Headers.Authorization;
             if (header == null)
             {
-                actionContext.Response = actionContext.Request.CreateResponse(System.Net.HttpStatusCode.Unauthorized, "Unauthorized. Please supply the token.");
+                actionContext.Response = actionContext.Request.CreateResponse(System.Net.HttpStatusCode.Unauthorized, "Unauthorized. Please supply teacher the token.");
 
             }
             else if (!AuthService.IsTokenValid(header.Parameter))
             {
-                actionContext.Response = actionContext.Request.CreateResponse(System.Net.HttpStatusCode.Unauthorized, "Supplied token is invalid or expired");
+                actionContext.Response = actionContext.Request.CreateResponse(System.Net.HttpStatusCode.Unauthorized, "Supplied teacher token is invalid or expired");
             }
 
             base.OnAuthorization(actionContext);

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace SchoolTimeTableDAL.Interfaces
 {
-    public interface IAuth
+    public interface IAuth<CLASS>
     {
-        Teacher Authenticate(string uname, string pass);
+        CLASS Authenticate(string uname, string pass);
     }
 }

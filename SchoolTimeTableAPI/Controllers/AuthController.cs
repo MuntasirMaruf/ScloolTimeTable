@@ -15,8 +15,8 @@ namespace SchoolTimeTableApi.Controllers
     public class AuthController : ApiController
     {
         [HttpPost]
-        [Route("api/login")]
-        public HttpResponseMessage Auth(Login login)
+        [Route("api/teacher/login")]
+        public HttpResponseMessage AuthTeacher(Login login)
         {
             var tk = AuthService.Auth(login.Email, login.Password);
             if (tk != null)
@@ -25,7 +25,23 @@ namespace SchoolTimeTableApi.Controllers
             }
             else
             {
-                return Request.CreateResponse(HttpStatusCode.Unauthorized, "Invalid Crentials");
+                return Request.CreateResponse(HttpStatusCode.Unauthorized, "Invalid Teacher Crentials");
+            }
+        }
+
+
+        [HttpPost]
+        [Route("api/student/login")]
+        public HttpResponseMessage AuthStudent(Login login)
+        {
+            var tk = StudentAuthService.Auth(login.Email, login.Password);
+            if (tk != null)
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, tk.Key);
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.Unauthorized, "Invalid Student Crentials");
             }
         }
 

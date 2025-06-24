@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SchoolTimeTableDAL.Repos
 {
-    internal class TeacherRepo : Repo, IRepo<Teacher, int, Teacher>, IAuth
+    internal class TeacherRepo : Repo, IRepo<Teacher, int, Teacher>, IAuth<Teacher>
     {
         public Teacher Get(int id)
         {

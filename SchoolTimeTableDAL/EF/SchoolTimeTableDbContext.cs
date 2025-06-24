@@ -21,7 +21,8 @@ namespace SchoolTimeTableDAL.EF
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Slot> Slots { get; set; }
         public DbSet<Status> Statuses { get; set; }
-        public DbSet<Login> Logins { get; set; }
         public DbSet<Token> Tokens { get; set; }
+        public DbSet<TokenStudent> TokenStudents { get; set; }
+
     }
 }

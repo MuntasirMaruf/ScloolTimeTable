@@ -55,7 +55,6 @@
     <Compile Include="EF\SchoolTimeTableDbContext.cs" />
     <Compile Include="EF\Tables\Class.cs" />
     <Compile Include="EF\Tables\ClassSectionStudent.cs" />
-    <Compile Include="EF\Tables\Login.cs" />
     <Compile Include="EF\Tables\Room.cs" />
     <Compile Include="EF\Tables\RoomSlot.cs" />
     <Compile Include="EF\Tables\Schedule.cs" />
@@ -63,11 +62,15 @@
     <Compile Include="EF\Tables\Slot.cs" />
     <Compile Include="EF\Tables\Status.cs" />
     <Compile Include="EF\Tables\Student.cs" />
+    <Compile Include="EF\Tables\TokenStudent.cs" />
     <Compile Include="EF\Tables\Subject.cs" />
     <Compile Include="EF\Tables\Teacher.cs" />
     <Compile Include="EF\Tables\Token.cs" />
+    <Compile Include="Interfaces\IAdmit.cs" />
+    <Compile Include="Interfaces\IAssignRoomSlot.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
+    <Compile Include="Interfaces\ISchedule.cs" />
     <Compile Include="Migrations\202506231742483_Initial Table Creation.cs" />
     <Compile Include="Migrations\202506231742483_Initial Table Creation.Designer.cs">
       <DependentUpon>202506231742483_Initial Table Creation.cs</DependentUpon>
@@ -84,14 +87,30 @@
     <Compile Include="Migrations\202506232137308_Updated Login Table Attributes.Designer.cs">
       <DependentUpon>202506232137308_Updated Login Table Attributes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202506232211313_Removed login table and created StudentToken.cs" />
+    <Compile Include="Migrations\202506232211313_Removed login table and created StudentToken.Designer.cs">
+      <DependentUpon>202506232211313_Removed login table and created StudentToken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506241911486_Fixed Slot Table.cs" />
+    <Compile Include="Migrations\202506241911486_Fixed Slot Table.Designer.cs">
+      <DependentUpon>202506241911486_Fixed Slot Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\ClassRepo.cs" />
+    <Compile Include="Repos\ClassSectionStudentRepo.cs" />
+    <Compile Include="Repos\RoomRepo.cs" />
+    <Compile Include="Repos\RoomSlotRepo.cs" />
+    <Compile Include="Repos\ScheduleRepo.cs" />
     <Compile Include="Repos\SectionRepo.cs" />
+    <Compile Include="Repos\SlotRepo.cs" />
+    <Compile Include="Repos\StatusRepo.cs" />
     <Compile Include="Repos\StudentRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\SubjectRepo.cs" />
     <Compile Include="Repos\TeacherRepo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
+    <Compile Include="Repos\TokenStudentRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -109,6 +128,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202506232137308_Updated Login Table Attributes.resx">
       <DependentUpon>202506232137308_Updated Login Table Attributes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506232211313_Removed login table and created StudentToken.resx">
+      <DependentUpon>202506232211313_Removed login table and created StudentToken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506241911486_Fixed Slot Table.resx">
+      <DependentUpon>202506241911486_Fixed Slot Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

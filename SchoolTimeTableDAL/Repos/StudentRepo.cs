@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SchoolTimeTableDAL.Repos
 {
-    internal class StudentRepo : Repo, IRepo<Student, int, Student>
+    internal class StudentRepo : Repo, IRepo<Student, int, Student>, IAuth<Student>
     {
         public Student Get(int id)
         {
@@ -56,6 +56,15 @@ namespace SchoolTimeTableDAL.Repos
                 db.Students.Remove(student);
                 db.SaveChanges();
             }
+        }
+
+        public Student Authenticate(string email, string password)
+        {
+            var student = (from t in db.Students
+                           where t.Email.Equals(email) &&
+                           t.Password.Equals(password)
+                           select t).SingleOrDefault();
+            return student;
         }
     }
 }

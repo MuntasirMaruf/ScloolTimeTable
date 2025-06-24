@@ -13,12 +13,14 @@ namespace SchoolTimeTableDAL.EF.Tables
         public int Id { get; set; }
 
         [Required]
-        [Column(TypeName = "DATETIME")]
-        public DateTime StartTime { get; set; }
+        [Column(TypeName = "VARCHAR")]
+        [MaxLength(50)]
+        public string StartTime { get; set; }
 
         [Required]
-        [Column(TypeName = "DATETIME")]
-        public DateTime EndTime { get; set; }
+        [Column(TypeName = "VARCHAR")]
+        [MaxLength(50)]
+        public string EndTime { get; set; }
 
         [Required]
         [Column(TypeName = "INT")]

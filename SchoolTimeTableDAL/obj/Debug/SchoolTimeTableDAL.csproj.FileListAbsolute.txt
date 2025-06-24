@@ -15,3 +15,5 @@ D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL
 D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.Addedpassword.resources
 D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.AddedTeacherAuthentication.resources
 D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.UpdatedLoginTableAttributes.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.RemovedlogintableandcreatedStudentToken.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.FixedSlotTable.resources

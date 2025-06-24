@@ -7,10 +7,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace SchoolTimeTableApi.Controllers
 {
-    [RoutePrefix("api/students")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
+    [RoutePrefix("api/student")]
     public class StudentController : ApiController
     {
 
