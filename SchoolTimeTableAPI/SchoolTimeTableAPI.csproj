@@ -121,6 +121,7 @@
     <Compile Include="Auths\TeacherLogged.cs" />
     <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\RoomSlotController.cs" />
+    <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Controllers\SlotController.cs" />
     <Compile Include="Controllers\StudentAdmissionController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
@@ -133,6 +134,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\ScheduleModel.cs" />
     <Compile Include="Models\StudentAdmission.cs" />
     <Compile Include="Models\UploadModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

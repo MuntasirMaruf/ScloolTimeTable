@@ -51,5 +51,19 @@ namespace SchoolTimeTableBLL.Services
             var data = DataAccess.ScheduleData();
             data.Delete(id);
         }
+        public static void AssignSchedule()
+        {
+            DataAccess.AssignSchedule().Assign();
+        }
+
+        public static object GetSchedule(int id)
+        {
+            return DataAccess.GetSchedule().GetSchedule(id);
+        }
+
+        public static void SendEmail(int id)
+        {
+            DataAccess.SendEmail().SendEmail(id);
+        }
     }
 }

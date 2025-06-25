@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SchoolTimeTableDAL.Interfaces
 {
-    public interface IAssignRoomSlot
+    public interface ISendEmail
     {
-        void Assign();
+        void SendEmail(int id);
+        void SendScheduleEmail(string toEmail, string subject, string body);
     }
 }

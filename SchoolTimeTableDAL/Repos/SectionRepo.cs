@@ -34,6 +34,7 @@ namespace SchoolTimeTableDAL.Repos
             {
                 existingSection.Name = section.Name;
                 existingSection.Status = section.Status;
+                existingSection.Capacity = section.Capacity;
                 db.SaveChanges();
             }
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SchoolTimeTableDAL.Repos
 {
-    internal class RoomSlotRepo : Repo, IRepo<RoomSlot, int, RoomSlot>, IAssignRoomSlot
+    internal class RoomSlotRepo : Repo, IRepo<RoomSlot, int, RoomSlot>, IAssign
     {
         public RoomSlot Get(int id)
         {
@@ -80,7 +80,8 @@ namespace SchoolTimeTableDAL.Repos
                         newRoomSlots.Add(new RoomSlot
                         {
                             SlotId = slot.Id,
-                            RoomId = room.Id
+                            RoomId = room.Id,
+                            Status = 1
                         });
                     }
                 }

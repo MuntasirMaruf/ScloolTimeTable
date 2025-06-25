@@ -19,6 +19,10 @@ namespace SchoolTimeTableDAL.EF.Tables
 
         [Required]
         [Column(TypeName = "INT")]
+        public int Capacity { get; set; }
+
+        [Required]
+        [Column(TypeName = "INT")]
         public int Status { get; set; }
     }
 }

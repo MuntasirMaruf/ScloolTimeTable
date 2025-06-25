@@ -18,10 +18,6 @@ namespace SchoolTimeTableDAL.EF.Tables
         public string Name { get; set; }
 
         [Required]
-        [Column(TypeName = "INT")]
-        public int Roll { get; set; }
-
-        [Required]
         [Column(TypeName = "VARCHAR")]
         [MaxLength(100)]
         public string Email { get; set; }

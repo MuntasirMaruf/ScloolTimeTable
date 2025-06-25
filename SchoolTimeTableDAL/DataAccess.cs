@@ -77,13 +77,28 @@ namespace SchoolTimeTableDAL
             return new ClassSectionStudentRepo();
         }
 
-        public static IAssignRoomSlot AssignRoomSlot()
+        public static IAssign AssignRoomSlot()
         {
             return new RoomSlotRepo();
         }
         public static IRepo<SchoolDocument, int, SchoolDocument> SchoolDocumentData()
         {
             return new SchoolDocumentRepo();
+        }
+
+        public static IAssign AssignSchedule()
+        {
+            return new ScheduleRepo();
+
+        }
+        public static ISchedule<object> GetSchedule()
+        {
+            return new ScheduleRepo();
+
+        }
+        public static ISendEmail SendEmail()
+        {
+            return new ScheduleRepo();
         }
     }
 }

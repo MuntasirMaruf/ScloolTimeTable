@@ -20,3 +20,7 @@ D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL
 D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.AddedSchoolDocumentsTable.resources
 D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.UpdatedSchoolDocument.resources
 D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.UpdatedSchoolDocumentTable.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.UpdatedSectionTable.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.UpdatedSectionTableAddedStudentCount.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.UpdatedSectionTableRemovedStudentCount.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.UpdatedStudentTable.resources

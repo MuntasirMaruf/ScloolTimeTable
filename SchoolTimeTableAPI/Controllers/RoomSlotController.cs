@@ -30,7 +30,7 @@ namespace SchoolTimeTableApi.Controllers
         }
 
         [TeacherLogged]
-        [HttpGet]
+        [HttpPost]
         [Route("assign")]
 
         public HttpResponseMessage Assign()

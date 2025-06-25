@@ -68,10 +68,11 @@
     <Compile Include="EF\Tables\Teacher.cs" />
     <Compile Include="EF\Tables\Token.cs" />
     <Compile Include="Interfaces\IAdmit.cs" />
-    <Compile Include="Interfaces\IAssignRoomSlot.cs" />
+    <Compile Include="Interfaces\IAssign.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Interfaces\ISchedule.cs" />
+    <Compile Include="Interfaces\ISendEmail.cs" />
     <Compile Include="Migrations\202506231742483_Initial Table Creation.cs" />
     <Compile Include="Migrations\202506231742483_Initial Table Creation.Designer.cs">
       <DependentUpon>202506231742483_Initial Table Creation.cs</DependentUpon>
@@ -107,6 +108,22 @@
     <Compile Include="Migrations\202506242258456_Updated SchoolDocument Table.cs" />
     <Compile Include="Migrations\202506242258456_Updated SchoolDocument Table.Designer.cs">
       <DependentUpon>202506242258456_Updated SchoolDocument Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506250608271_Updated Section Table.cs" />
+    <Compile Include="Migrations\202506250608271_Updated Section Table.Designer.cs">
+      <DependentUpon>202506250608271_Updated Section Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506250627519_Updated Section Table Added StudentCount.cs" />
+    <Compile Include="Migrations\202506250627519_Updated Section Table Added StudentCount.Designer.cs">
+      <DependentUpon>202506250627519_Updated Section Table Added StudentCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506250637131_Updated Section Table Removed StudentCount.cs" />
+    <Compile Include="Migrations\202506250637131_Updated Section Table Removed StudentCount.Designer.cs">
+      <DependentUpon>202506250637131_Updated Section Table Removed StudentCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506250653570_Updated Student Table.cs" />
+    <Compile Include="Migrations\202506250653570_Updated Student Table.Designer.cs">
+      <DependentUpon>202506250653570_Updated Student Table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -157,6 +174,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202506242258456_Updated SchoolDocument Table.resx">
       <DependentUpon>202506242258456_Updated SchoolDocument Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506250608271_Updated Section Table.resx">
+      <DependentUpon>202506250608271_Updated Section Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506250627519_Updated Section Table Added StudentCount.resx">
+      <DependentUpon>202506250627519_Updated Section Table Added StudentCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506250637131_Updated Section Table Removed StudentCount.resx">
+      <DependentUpon>202506250637131_Updated Section Table Removed StudentCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506250653570_Updated Student Table.resx">
+      <DependentUpon>202506250653570_Updated Student Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
