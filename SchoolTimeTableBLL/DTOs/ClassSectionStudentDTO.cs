@@ -9,8 +9,7 @@ namespace SchoolTimeTableBLL.DTOs
     public class ClassSectionStudentDTO
     {
         public int Id { get; set; }
-        public int ClassId { get; set; }
-        public int SectionId { get; set; }
+        public int ClassSectionId { get; set; }
         public int StudentId { get; set; }
         public int Status { get; set; }
     }

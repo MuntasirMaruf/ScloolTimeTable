@@ -54,7 +54,10 @@
     <Compile Include="DataAccess.cs" />
     <Compile Include="EF\SchoolTimeTableDbContext.cs" />
     <Compile Include="EF\Tables\Class.cs" />
+    <Compile Include="EF\Tables\ClassSection.cs" />
+    <Compile Include="EF\Tables\ClassSectionRoomSlot.cs" />
     <Compile Include="EF\Tables\ClassSectionStudent.cs" />
+    <Compile Include="EF\Tables\ClassSectionSubject.cs" />
     <Compile Include="EF\Tables\Room.cs" />
     <Compile Include="EF\Tables\RoomSlot.cs" />
     <Compile Include="EF\Tables\Schedule.cs" />
@@ -63,6 +66,7 @@
     <Compile Include="EF\Tables\Slot.cs" />
     <Compile Include="EF\Tables\Status.cs" />
     <Compile Include="EF\Tables\Student.cs" />
+    <Compile Include="EF\Tables\TimeTable.cs" />
     <Compile Include="EF\Tables\TokenStudent.cs" />
     <Compile Include="EF\Tables\Subject.cs" />
     <Compile Include="EF\Tables\Teacher.cs" />
@@ -70,9 +74,11 @@
     <Compile Include="Interfaces\IAdmit.cs" />
     <Compile Include="Interfaces\IAssign.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
+    <Compile Include="Interfaces\IMail.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Interfaces\ISchedule.cs" />
     <Compile Include="Interfaces\ISendEmail.cs" />
+    <Compile Include="Interfaces\ITimeTable.cs" />
     <Compile Include="Migrations\202506231742483_Initial Table Creation.cs" />
     <Compile Include="Migrations\202506231742483_Initial Table Creation.Designer.cs">
       <DependentUpon>202506231742483_Initial Table Creation.cs</DependentUpon>
@@ -125,10 +131,41 @@
     <Compile Include="Migrations\202506250653570_Updated Student Table.Designer.cs">
       <DependentUpon>202506250653570_Updated Student Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202506251217331_Added ClassSection Table.cs" />
+    <Compile Include="Migrations\202506251217331_Added ClassSection Table.Designer.cs">
+      <DependentUpon>202506251217331_Added ClassSection Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506251218307_Added ClassSection Table to the database.cs" />
+    <Compile Include="Migrations\202506251218307_Added ClassSection Table to the database.Designer.cs">
+      <DependentUpon>202506251218307_Added ClassSection Table to the database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506251236333_Updated ClassSections Table.cs" />
+    <Compile Include="Migrations\202506251236333_Updated ClassSections Table.Designer.cs">
+      <DependentUpon>202506251236333_Updated ClassSections Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506251313220_Added ClassSectionsRoomSlots Table.cs" />
+    <Compile Include="Migrations\202506251313220_Added ClassSectionsRoomSlots Table.Designer.cs">
+      <DependentUpon>202506251313220_Added ClassSectionsRoomSlots Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506251409005_Added ClassSectionsRoomSlots.cs" />
+    <Compile Include="Migrations\202506251409005_Added ClassSectionsRoomSlots.Designer.cs">
+      <DependentUpon>202506251409005_Added ClassSectionsRoomSlots.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506251518458_Added ClassSectionSubject Table.cs" />
+    <Compile Include="Migrations\202506251518458_Added ClassSectionSubject Table.Designer.cs">
+      <DependentUpon>202506251518458_Added ClassSectionSubject Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506251604363_Added TimeTable Table.cs" />
+    <Compile Include="Migrations\202506251604363_Added TimeTable Table.Designer.cs">
+      <DependentUpon>202506251604363_Added TimeTable Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\ClassRepo.cs" />
+    <Compile Include="Repos\ClassSectionRepo.cs" />
     <Compile Include="Repos\ClassSectionStudentRepo.cs" />
+    <Compile Include="Repos\ClassSectionSubjectRepo.cs" />
+    <Compile Include="Repos\ClassSectionRoomSlotRepo.cs" />
     <Compile Include="Repos\RoomRepo.cs" />
     <Compile Include="Repos\RoomSlotRepo.cs" />
     <Compile Include="Repos\ScheduleRepo.cs" />
@@ -140,6 +177,7 @@
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\SubjectRepo.cs" />
     <Compile Include="Repos\TeacherRepo.cs" />
+    <Compile Include="Repos\TimeTableRepo.cs" />
     <Compile Include="Repos\TokenRepo.cs" />
     <Compile Include="Repos\TokenStudentRepo.cs" />
   </ItemGroup>
@@ -186,6 +224,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202506250653570_Updated Student Table.resx">
       <DependentUpon>202506250653570_Updated Student Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506251217331_Added ClassSection Table.resx">
+      <DependentUpon>202506251217331_Added ClassSection Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506251218307_Added ClassSection Table to the database.resx">
+      <DependentUpon>202506251218307_Added ClassSection Table to the database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506251236333_Updated ClassSections Table.resx">
+      <DependentUpon>202506251236333_Updated ClassSections Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506251313220_Added ClassSectionsRoomSlots Table.resx">
+      <DependentUpon>202506251313220_Added ClassSectionsRoomSlots Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506251409005_Added ClassSectionsRoomSlots.resx">
+      <DependentUpon>202506251409005_Added ClassSectionsRoomSlots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506251518458_Added ClassSectionSubject Table.resx">
+      <DependentUpon>202506251518458_Added ClassSectionSubject Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506251604363_Added TimeTable Table.resx">
+      <DependentUpon>202506251604363_Added TimeTable Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

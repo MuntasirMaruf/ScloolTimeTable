@@ -56,68 +56,64 @@ namespace SchoolTimeTableDAL.Repos
 
         public void Assign()
         {
-            
+
         }
 
         public dynamic GetSchedule(int id)
         {
-            var clsSecStd = (from css in db.ClassSectionStudents
-                           where css.StudentId == id
-                           select css).SingleOrDefault();
-
-            if (clsSecStd == null)
+            var classSectionStudent = (from css in db.ClassSectionStudents
+                                       where css.StudentId == id
+                                       select css).SingleOrDefault();
+            
+            if(classSectionStudent == null)
             {
-                throw new Exception("Class not found for the student.");
+                throw new Exception("Student not found in any class section.");
             }
-
-            var clsSecStdId = clsSecStd.Id;
-            var classId = clsSecStd.ClassId;
-            var sectionId = clsSecStd.SectionId;
-
-            var schedule = (from s in db.Schedules where s.ClassSectionStudentId == clsSecStdId
-                            select s).SingleOrDefault();
-
-            if (schedule == null)
-            {
-                throw new Exception("Student not yet scheduled.");
-            }
-
-            var roomSlot = (from rs in db.RoomSlots
-                            where rs.Id == schedule.RoomSlotId
-                            select rs).SingleOrDefault();
+            
+            var classSection = (from cs in db.ClassSections
+                                where cs.Id == classSectionStudent.ClassSectionId
+                                select cs).SingleOrDefault();
+            
 
             var student = (from s in db.Students
                            where s.Id == id
                            select s).SingleOrDefault();
 
             var cls = (from c in db.Classes
-                            where c.Id == classId
-                            select c).SingleOrDefault();
+                       where c.Id == classSection.ClassId
+                       select c).SingleOrDefault();
+
+            
 
             var section = (from s in db.Sections
-                            where s.Id == sectionId
-                            select s).SingleOrDefault();
+                           where s.Id == classSection.SectionId
+                           select s).SingleOrDefault();
+
+
+
+
+
+            var classSectionRoomSlot = (from csr in db.ClassSectionRoomSlots
+                                        where csr.ClassSectionId == classSectionStudent.ClassSectionId
+                                        select csr).FirstOrDefault();
+
+
+            var roomSlot = (from rs in db.RoomSlots
+                            where rs.Id == classSectionRoomSlot.RoomSlotId
+                            select rs).FirstOrDefault();
+
 
             var room = (from r in db.Rooms
-                          where r.Id == roomSlot.RoomId
-                          select r).FirstOrDefault();
+                        where r.Id == roomSlot.RoomId
+                        select r).FirstOrDefault();
+
 
             var slot = (from s in db.Slots
-                          where s.Id == roomSlot.SlotId
-                          select s).FirstOrDefault();
+                        where s.Id == roomSlot.SlotId
+                        select s).FirstOrDefault();
 
-            var teacher = (from t in db.Teachers
-                             where t.Id == schedule.TeacherId
-                             select t).SingleOrDefault();
-            if (teacher == null)
-            {
-                teacher = new Teacher
-                {
-                    Name = "Not Assigned"
-                };
-            }
 
-            var result = new 
+            var result = new
             {
                 Name = student.Name,
                 Class = cls.Name,
@@ -125,7 +121,6 @@ namespace SchoolTimeTableDAL.Repos
                 Room = room.Number,
                 Start = slot.StartTime,
                 End = slot.EndTime,
-                Teacher = teacher.Name
             };
 
             return result;
@@ -136,11 +131,11 @@ namespace SchoolTimeTableDAL.Repos
         {
             var fromAddress = new MailAddress("maruf.prottoy26@gmail.com", "School");
             var toAddress = new MailAddress(toEmail);
-            const string fromPassword = "baju jlfg ynuj iuwn"; // Use App Password for Gmail
+            const string fromPassword = "baju jlfg ynuj iuwn";
 
             var smtp = new SmtpClient
             {
-                Host = "smtp.gmail.com",       // Or your SMTP provider
+                Host = "smtp.gmail.com",
                 Port = 587,
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
@@ -168,11 +163,7 @@ namespace SchoolTimeTableDAL.Repos
                 "Section: " + data.Section + "\n" +
                 "Room: " + data.Room + "\n" +
                 "Start: " + data.Start + "\n" +
-                "End: " + data.End + "\n" +
-                "Teacher: " + data.Teacher;
-
-
-            var name = "Your Time Table";
+                "End: " + data.End + "\n";
 
             var toEmail = (from s in db.Students
                            where s.Id == id

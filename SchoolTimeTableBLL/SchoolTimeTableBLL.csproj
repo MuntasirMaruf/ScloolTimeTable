@@ -46,7 +46,10 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DTOs\ClassDTO.cs" />
+    <Compile Include="DTOs\ClassSectionDTO.cs" />
+    <Compile Include="DTOs\ClassSectionRoomSlotDTO.cs" />
     <Compile Include="DTOs\ClassSectionStudentDTO.cs" />
+    <Compile Include="DTOs\ClassSectionSubjectDTO.cs" />
     <Compile Include="DTOs\RoomDTO.cs" />
     <Compile Include="DTOs\RoomSlotDTO.cs" />
     <Compile Include="DTOs\ScheduleDTO.cs" />
@@ -57,11 +60,14 @@
     <Compile Include="DTOs\StudentDTO.cs" />
     <Compile Include="DTOs\SubjectDTO.cs" />
     <Compile Include="DTOs\TeacherDTO.cs" />
+    <Compile Include="DTOs\TimeTableDTO.cs" />
     <Compile Include="DTOs\TokenDTO.cs" />
     <Compile Include="DTOs\TokenStudentDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthService.cs" />
+    <Compile Include="Services\ClassSectionService.cs" />
     <Compile Include="Services\ClassSectionStudentService.cs" />
+    <Compile Include="Services\ClassSectionSubjectService.cs" />
     <Compile Include="Services\ClassService.cs" />
     <Compile Include="Services\RoomService.cs" />
     <Compile Include="Services\RoomSlotService.cs" />
@@ -74,6 +80,7 @@
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\SubjectService.cs" />
     <Compile Include="Services\TeacherService.cs" />
+    <Compile Include="Services\TimeTableService.cs" />
     <Compile Include="Services\UploadService.cs" />
   </ItemGroup>
   <ItemGroup>

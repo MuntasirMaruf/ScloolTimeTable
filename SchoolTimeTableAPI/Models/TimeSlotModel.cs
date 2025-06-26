@@ -5,9 +5,10 @@ using System.Web;
 
 namespace SchoolTimeTableApi.Models
 {
-    public class ScheduleModel
+    public class TimeSlotModel
     {
         public string ClassName { get; set; }
         public string SectionName { get; set; }
+        public string SubjectName { get; set; }
     }
 }

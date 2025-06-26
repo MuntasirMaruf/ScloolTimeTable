@@ -63,6 +63,10 @@ namespace SchoolTimeTableDAL
         {
             return new ScheduleRepo();
         }
+        public static IRepo<ClassSection, int, ClassSection> ClassSectionData()
+        {
+            return new ClassSectionRepo();
+        }
         public static IAuth<Teacher> AuthTeacher()
         {
             return new TeacherRepo();
@@ -99,6 +103,38 @@ namespace SchoolTimeTableDAL
         public static ISendEmail SendEmail()
         {
             return new ScheduleRepo();
+        }
+
+        public static IAssign AssignClassSection()
+        {
+            return new ClassSectionRepo();
+        }
+        public static IRepo<ClassSectionSubject, int, ClassSectionSubject> ClassSectionSubjectData()
+        {
+            return new ClassSectionSubjectRepo();
+        }
+        public static IAssign AssignClassSectionSubject()
+        {
+            return new ClassSectionSubjectRepo();
+        }
+
+        public static IRepo<TimeTable, int, TimeTable> TimeTableData()
+        {
+            return new TimeTableRepo();
+        }
+
+        public static ITimeTable<object> AddTimeTable()
+        {
+            return new TimeTableRepo();
+        }
+        public static ITimeTable<object> GetTimeSlot()
+        {
+            return new TimeTableRepo();
+        }
+
+        public static IMail EmailTimeSlot()
+        {
+            return new TimeTableRepo();
         }
     }
 }

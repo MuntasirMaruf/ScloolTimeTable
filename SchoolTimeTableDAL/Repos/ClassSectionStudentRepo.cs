@@ -3,6 +3,7 @@ using SchoolTimeTableDAL.EF.Tables;
 using SchoolTimeTableDAL.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
@@ -35,10 +36,8 @@ namespace SchoolTimeTableDAL.Repos
             var existingClassSectionStudent = db.ClassSectionStudents.Find(classSectionStudent.Id);
             if (existingClassSectionStudent != null)
             {
-                existingClassSectionStudent.ClassId = classSectionStudent.ClassId;
-                existingClassSectionStudent.SectionId = classSectionStudent.SectionId;
+                existingClassSectionStudent.ClassSectionId = classSectionStudent.ClassSectionId;
                 existingClassSectionStudent.StudentId = classSectionStudent.StudentId;
-                existingClassSectionStudent.Status = classSectionStudent.Status;
                 db.SaveChanges();
             }
             return existingClassSectionStudent;
@@ -56,7 +55,7 @@ namespace SchoolTimeTableDAL.Repos
 
         public void Admit(int roll, string cls, string section)
         {
-            
+
             var student = db.Students.FirstOrDefault(s => s.Id == roll);
             var classEntity = db.Classes.FirstOrDefault(c => c.Name == cls);
             var sectionEntity = db.Sections.FirstOrDefault(s => s.Name == section);
@@ -65,9 +64,8 @@ namespace SchoolTimeTableDAL.Repos
                 throw new Exception("Invalid roll number, class, or section.");
             }
 
-            // Check if the student is already admitted to the class and section
             var alreadyExists = (from s in db.ClassSectionStudents
-                            where s.StudentId == student.Id
+                                 where s.StudentId == student.Id
                                  select s).SingleOrDefault();
 
             if (alreadyExists != null)
@@ -76,29 +74,25 @@ namespace SchoolTimeTableDAL.Repos
             }
             else
             {
-                var classSectionsCount = (from s in db.ClassSectionStudents
-                                where s.SectionId  == sectionEntity.Id && s.ClassId == classEntity.Id
-                                select s).Count();
-                var exactSection = db.Sections.Find(sectionEntity.Id);
-                var capacity = exactSection.Capacity;
+                var classSection = (from cs in db.ClassSections
+                                        where cs.ClassId == classEntity.Id && cs.SectionId == sectionEntity.Id
+                                        select cs).SingleOrDefault();
 
-                if (classSectionsCount < capacity)
+                var studentCount = classSection.StudentCount;
+                if (studentCount >= sectionEntity.Capacity)
                 {
-                    var classSectionStudent = new ClassSectionStudent
-                    {
-                        StudentId = student.Id,
-                        ClassId = classEntity.Id,
-                        SectionId = sectionEntity.Id,
-                        Status = 1
-                    };
-                    db.ClassSectionStudents.Add(classSectionStudent);
-                    db.SaveChanges();
+                    throw new Exception("Class section is full.");
                 }
-                else
+                db.ClassSectionStudents.Add(new ClassSectionStudent
                 {
-                    throw new Exception("Class section is full. Cannot admit more students.");
-                }
-            }      
+                    ClassSectionId = classSection.Id,
+                    StudentId = student.Id
+                });
+                db.SaveChanges();
+
+                classSection.StudentCount++;
+                db.SaveChanges();
+            }
         }
     }
 }

@@ -14,18 +14,10 @@ namespace SchoolTimeTableDAL.EF.Tables
 
         [Required]
         [Column(TypeName = "INT")]
-        public int ClassId { get; set; }
-
-        [Required]
-        [Column(TypeName = "INT")]
-        public int SectionId { get; set; }
+        public int ClassSectionId { get; set; }
 
         [Required]
         [Column(TypeName = "INT")]
         public int StudentId { get; set; }
-
-        [Required]
-        [Column(TypeName = "INT")]
-        public int Status { get; set; }
     }
 }

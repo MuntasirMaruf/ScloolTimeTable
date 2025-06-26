@@ -24,6 +24,9 @@ namespace SchoolTimeTableDAL.EF
         public DbSet<Token> Tokens { get; set; }
         public DbSet<TokenStudent> TokenStudents { get; set; }
         public DbSet<SchoolDocument> SchoolDocuments { get; set; }
-
+        public DbSet<ClassSection> ClassSections { get; set; }
+        public DbSet<ClassSectionRoomSlot> ClassSectionRoomSlots { get; set; }
+        public DbSet<ClassSectionSubject> ClassSectionSubjects { get; set; }
+        public DbSet<TimeTable> TimeTables { get; set; }
     }
 }

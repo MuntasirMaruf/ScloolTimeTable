@@ -24,3 +24,10 @@ D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL
 D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.UpdatedSectionTableAddedStudentCount.resources
 D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.UpdatedSectionTableRemovedStudentCount.resources
 D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.UpdatedStudentTable.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.AddedClassSectionTable.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.AddedClassSectionTabletothedatabase.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.UpdatedClassSectionsTable.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.AddedClassSectionsRoomSlotsTable.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.AddedClassSectionsRoomSlots.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.AddedClassSectionSubjectTable.resources
+D:\Projects\.NET\SchoolTimeTable\SchoolTimeTableDAL\obj\Debug\SchoolTimeTableDAL.Migrations.AddedTimeTableTable.resources

@@ -49,7 +49,8 @@ namespace SchoolTimeTableApi.Controllers
         {
             try
             {
-                SubjectService.Add(subjectDTO);
+                SubjectService.Add(subjectDTO); 
+                ClassSectionSubjectService.AssignClassSectionSubject();
                 return Request.CreateResponse(HttpStatusCode.Created, "Subject added successfully.");
             }
             catch (Exception ex)
